@@ -1,16 +1,17 @@
 from os.path import isfile
-from json import dump, load
+import json
 
 class JsonManager:
 
-    def create_json(self, filepatch, username, password_hash):
+    def create_json(self, file_path, username, password_hash):
         """Adiciona um usuário ao JSON sem apagar os antigos"""
         users = []
 
-        if isfile(filepatch):
-            with open(filepatch, 'r') as f:
+        if isfile(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
                 try:
-                    users = load(f)
+                    users = json.load(f)
+                    # converte dict antigo em lista
                     if isinstance(users, dict):
                         users = [users]
                 except Exception:
@@ -18,18 +19,18 @@ class JsonManager:
 
         users.append({"username": username, "password": password_hash})
 
-        with open(filepatch, 'w') as f:
-            dump(users, f, indent=2, separators=(',', ': '))
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(users, f, indent=2, separators=(',', ': '))
 
-    def read_json(self, filepatch):
-        if isfile(filepatch):
-            with open(filepatch) as f:
-                data = load(f)
+    def read_json(self, file_path):
+        if isfile(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
                 if isinstance(data, dict):
                     data = [data]
                 return data
         return []
 
-    def update_json(self, filepatch, data):
-        with open(filepatch, 'w') as f:
-            dump(data, f, indent=2, separators=(',', ': '))
+    def update_json(self, file_path, data):
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, separators=(',', ': '))
