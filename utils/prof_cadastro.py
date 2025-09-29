@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from os.path import dirname, realpath, join, isfile
+from os.path import dirname, realpath, join
 from controls.json_maneger import JsonManager
 from getpass import getpass
 from passlib.hash import bcrypt
@@ -9,14 +9,14 @@ from passlib.hash import bcrypt
 class JLogin(JsonManager):
 
     def __init__(self):
-        self.root = dirname(realpath(__file__))
-        self.path_data = join(self.root, '../data/data.json')
-        self.logged_in_user = None  # variável de sessão
+        self.__root = dirname(realpath(__file__))  
+        self.__path_data = join(self.__root, '../data/data.json')  
+        self.__logged_in_user = None
 
     def sign_in(self):
         print('### Sign In ###')
 
-        users = self.read_json(self.path_data)
+        users = self.read_json(self.__path_data)
 
         while True:
             username = input('Enter your username (max 20 chars): ').strip()
@@ -44,13 +44,13 @@ class JLogin(JsonManager):
             break
 
         hash_password = bcrypt.hash(password)
-        self.create_json(self.path_data, username, hash_password)
+        self.create_json(self.__path_data, username, hash_password)
         print('Registration done!')
 
     def login(self):
         print('### Login ###')
 
-        users = self.read_json(self.path_data)
+        users = self.read_json(self.__path_data)
         if not users:
             print("No user registered. Please sign in first.")
             return False
@@ -62,7 +62,7 @@ class JLogin(JsonManager):
             if user['username'] == username:
                 if bcrypt.verify(password, user['password']):
                     print(f"Login successful! Welcome {username}")
-                    self.logged_in_user = username 
+                    self.__logged_in_user = username
                     return True
                 else:
                     print("Incorrect password!")
@@ -72,8 +72,12 @@ class JLogin(JsonManager):
         return False
 
     def logout(self):
-        if self.logged_in_user:
-            print(f"{self.logged_in_user} has been logged out.")
-            self.logged_in_user = None
+        if self.__logged_in_user:
+            print(f"{self.__logged_in_user} has been logged out.")
+            self.__logged_in_user = None
         else:
             print("No user is logged in.")
+
+    def get_logged_in_user(self):
+        return self.__logged_in_user
+

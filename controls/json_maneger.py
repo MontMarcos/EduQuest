@@ -4,14 +4,12 @@ import json
 class JsonManager:
 
     def create_json(self, file_path, username, password_hash):
-        """Adiciona um usuário ao JSON sem apagar os antigos"""
         users = []
 
         if isfile(file_path):
             with open(file_path, 'r', encoding='utf-8') as f:
                 try:
                     users = json.load(f)
-                    # converte dict antigo em lista
                     if isinstance(users, dict):
                         users = [users]
                 except Exception:

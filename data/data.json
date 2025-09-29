@@ -1,14 +1,14 @@
 [
   {
-    "username": "marcos",
-    "password": "$2b$12$IUxCF1lXtS9KFaej6DWt6.nImalfqJKnGTwNcS73ChBeR/3atGKPi"
-  },
-  {
     "username": "test",
     "password": "$2b$12$wE72X2UYH4aRZwecrrMwI.edo5azL/Ay7Gg2gi94UInYtYZTtZp46"
   },
   {
-    "username": "asd",
-    "password": "$2b$12$jJqTV75EJH/Xp4B2ydzeHeEYluNHePlroDggJTxJvQGkDK3v020Sm"
+    "username": "marcos",
+    "password": "$2b$12$LFx5ob8uQR6E5u9kGjHX.Ol7.ahnpvhMkgcLszmViiJdexKsMUrn."
+  },
+  {
+    "username": "thomas",
+    "password": "$2b$12$IPSyzWyx7oV91lSrkTwNu.pYpLC1S5oWvcxWnAbj6mK01gHYmW1wG"
   }
 ]
