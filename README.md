@@ -49,7 +49,6 @@ cd EduQuest
    # Se estiver usando virtualenv
    python -m venv venv
    source venv/bin/activate
-   pip install -r requirements.txt
    pip install  passlib
    ```
 3. Execute o projeto:
