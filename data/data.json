@@ -1,14 +1,14 @@
 [
   {
+    "username": "a",
+    "password": "$5$rounds=535000$nh2pjMGI6x0gQk/6$m0sPc6q0eZkuiUfnOE009Xs33iX.bxqD2kDqaK6.0IC"
+  },
+  {
     "username": "test",
-    "password": "$2b$12$wE72X2UYH4aRZwecrrMwI.edo5azL/Ay7Gg2gi94UInYtYZTtZp46"
+    "password": "$5$rounds=535000$7SuQY6doQsh.rJO7$B9PJ9lkxQkADWv78zUMcSA1ioW0g5pyIrT2eV4fzCWD"
   },
   {
-    "username": "marcos",
-    "password": "$2b$12$LFx5ob8uQR6E5u9kGjHX.Ol7.ahnpvhMkgcLszmViiJdexKsMUrn."
-  },
-  {
-    "username": "thomas",
-    "password": "$2b$12$IPSyzWyx7oV91lSrkTwNu.pYpLC1S5oWvcxWnAbj6mK01gHYmW1wG"
+    "username": "as",
+    "password": "$5$rounds=535000$Ncvv8JjdD8xf8OKh$5b/Kj4WekJnTHheqyUvnp/5oJQyqoRqswV6DzuVQcA6"
   }
 ]
