@@ -1,4 +1,4 @@
-# 🚀 EduQuest Platform Core
+#  EduQuest Platform Core
 
 ![Status: Estável (Auth)](https://img.shields.io/badge/Status-Estável%20(Auth)-brightgreen)
 ![DB: PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-4169E1)
@@ -9,7 +9,7 @@ Este repositório estabelece a **fundação segura** do sistema, fornecendo um m
 
 ---
 
-## ✨ Módulo Principal: Autenticação (Auth API)
+##  Módulo Principal: Autenticação (Auth API)
 
 O sistema de autenticação migrou de arquivos JSON para uma API de segurança persistente em PostgreSQL.
 
@@ -37,7 +37,7 @@ Os modais de Login e Cadastro são minimalistas e focam apenas nos campos essenc
 
 ---
 
-## 🏗️ Arquitetura e Tecnologia
+##  Arquitetura e Tecnologia
 
 O projeto é construído em camadas para garantir que a lógica de segurança possa ser usada por qualquer outro módulo, sem depender da interface gráfica.
 
@@ -51,10 +51,17 @@ O projeto é construído em camadas para garantir que a lógica de segurança po
 ---
 ---
 
-## ⚙️ Guia de Configuração e Execução
+##  Guia de Configuração e Execução
 
+>  **Quer apenas executar o programa?**  
+> Basta rodar o arquivo **`Exe_EduQuest_Login`**, já empacotado e pronto para uso!  
+> Nenhuma instalação de dependências é necessária.  
+> <br>  
+>  *Para desenvolvedores que desejam modificar ou evoluir o projeto, siga o guia abaixo.*
 
-### 🧩 Pré-requisitos (DB e Ambiente)
+---
+
+###  Pré-requisitos (DB e Ambiente)
 
 1. **PostgreSQL Server** rodando.  
 2. Crie o banco de dados **`eduquest`** (ou o nome desejado).  
@@ -64,7 +71,7 @@ O projeto é construído em camadas para garantir que a lógica de segurança po
    - `DB_USER` — nome do usuário  
    - `DB_PASS` — senha do banco  
 
-   > 💡 *No Linux*, você pode adicioná-las ao `~/.bashrc` ou `~/.zshrc`:  
+   >  *No Linux*, você pode adicioná-las ao `~/.bashrc` ou `~/.zshrc`:  
    > ```bash
    > export DB_NAME=eduquest
    > export DB_USER=seu_usuario
@@ -73,7 +80,7 @@ O projeto é construído em camadas para garantir que a lógica de segurança po
 
 ---
 
-### 🛠️ 1. Clonagem e Instalação
+### 1. Clonagem e Instalação
 
 ```bash
 # Clone o repositório
@@ -88,7 +95,7 @@ source venv/bin/activate   # Linux/macOS
 # Instale as dependências necessárias
 pip install psycopg2-binary python-dotenv passlib
 
-## 🗂️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```plaintext
 EduQuest/
@@ -111,7 +118,7 @@ EduQuest/
 └── README.md                     # Documentação do projeto
 ```
 
-## 🤝 Colabore
+##  Colabore
 
 - Faça um **fork** do repositório.  
 - Envie um **Pull Request** para novas funcionalidades ou correções.
@@ -125,7 +132,7 @@ Veja o arquivo [`LICENSE`](./LICENSE) para mais informações.
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 Feito com 💙 por **MontMarcos**.
 
