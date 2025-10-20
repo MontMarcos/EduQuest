@@ -56,3 +56,6 @@ class PsqlLogin:
 
     def get_logged_in_user(self):
         return self.__logged_in_user
+    
+    def list_user(self):
+        return self.db_manager.read_all_users()

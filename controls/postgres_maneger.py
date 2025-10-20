@@ -80,7 +80,7 @@ class PostgresManager:
         return users
 
     def get_user_by_username(self, username: str) -> Optional[Dict[str, str]]:
-        """Recupera os dados de um único usuário pelo nome de usuário."""
+        """Recupera os dados de um único usuário pelo nome de usuário."""   
         try:
             conn = self.get_connection()
             cur = conn.cursor()
